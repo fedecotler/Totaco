@@ -252,6 +252,57 @@ textarea {
     display: block;
 }
 
+#experiencia .container {
+    text-align: center;
+    padding: 100px 12px;
+    justify-items: center;
+}
+
+#experiencia .container {
+
+}
+
+#experiencia .texto {
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#eperiencia .experiencia-media {
+    width: 100px;
+    height: 100px;
+}
+
+#experiencia h2 {
+    margin-top: 0px;
+}
+
+.gradient {
+    height: 200px;
+    background-image: linear-gradient(to top, rgb(179, 243, 105), rgb(111, 173, 40));
+}
+
+.gradient-footer {
+  height: 200px;
+  background-image: linear-gradient(to top, rgb(111, 173, 40), rgb(179, 243, 105))
+}
+
+.chipotle:hover {
+    color: green;
+}
+
+.jalapeno:hover {
+    color: orange;
+}
+
+.habanero:hover {
+    color: red;
+}
+
 @media handheld,
 only screen and (max-width: 767px) {
     .programas {
@@ -318,5 +369,26 @@ only screen and (max-width: 767px) {
 
     .contactanos-formulario {
         text-align: center;
+    }
+
+    #contactanos-experiencia .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #contactanos-experiencia .texto {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+
+
+    #contactanos-experiencia .img-container {
+        height: 400px;
+        width: 480px;
     }
 }
