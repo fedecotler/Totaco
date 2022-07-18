@@ -1,164 +1,4 @@
-* {
-    box-sizing: border-box;
-}
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: rgb(179, 243, 105);
-}
-
-h1 {
-    font-size: 3.5em;
-}
-
-h2 {
-    font-size: 2.7em;
-}
-
-h3 {
-    font-size: 2em;
-}
-
-p {
-    font-size: 1.25em;
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    font-size: 1.25em;
-}
-
-.container {
-    max-width: 1400px;
-    margin: auto;
-    display: block;
-}
-
-header {
-    background-color: rgb(179, 243, 105);
-
-}
-
-header .logo {
-    margin: 0;
-    padding: 25px 30px;
-    font-weight: bold;
-    color: rgb(255, 0, 0);
-    font-size: 2em;
-}
-
-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main {
-    background-color: rgb(179, 243, 105);
-}
-
-
-#somos-totaco .container {
-    text-align: center;
-    padding: 100px 12px;
-}
-
-#somos-totaco .container {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#somos-totaco .texto {
-    width: 50%;
-    max-width: 600px;
-    text-align: initial;
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#somos-totaco h2 {
-    margin-top: 0px;
-}
-
-#somos-totaco .img-container {
-    background-image: url("media/tacoparty.jpg");
-    background-size: cover;
-    background-position: center center;
-    height: 500px;
-    width: 600px;
-}
-
-.color-acento {
-    color: rgb(77, 77, 77);
-}
-
-.gradient {
-    height: 200px;
-    background-image: linear-gradient(to top, rgb(179, 243, 105), rgb(111, 173, 40));
-}
-
-.transform {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(88, 121, 50);
-    color: green;
-    transition: all 0.5s, background-color 2s;
-}
-
-.transform:hover {
-    transform: translateX(50px);
-    background-color: grey;
-    color: black;
-}
-
-
-#nuestras-sucursales .programas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-}
-
-
-#nuestras-sucursales p {
-    display: block;
-    margin-bottom: 30px;
-}
-
-#nuestras-sucursales h3 {
-    margin-top: 0;
-}
-
-#nuestras-sucursales .carta {
-    padding: 50px;
-    background-size: 100% 150px;
-    background-position-y: 0;
-    background-color: rgb(157, 247, 55);
-    box-shadow: 2px 2px 10px rgb(0, 54, 54);
-}
-
-.sucursales-container-media {
-    text-align: center;
-    margin-bottom: 30px;
-    margin-top: 50px;
-}
-
-
-.sucursales-media {
-    width: 350px;
-    height: 250px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
 
 #contactanos-somos-totaco .container {
     text-align: center;
@@ -258,9 +98,7 @@ textarea {
     justify-items: center;
 }
 
-#experiencia .container {
-
-}
+/* #experiencia .container {} */
 
 #experiencia .texto {
     width: 50%;
@@ -281,14 +119,35 @@ textarea {
     margin-top: 0px;
 }
 
+#animacion-experiencia .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: -50px;
+}
+
+#animacion-experiencia img {
+    width: 250px;
+}
+
+#animacion-experiencia .agrandar {
+    animation-name: agrandar;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+
 .gradient {
     height: 200px;
     background-image: linear-gradient(to top, rgb(179, 243, 105), rgb(111, 173, 40));
 }
 
 .gradient-footer {
-  height: 200px;
-  background-image: linear-gradient(to top, rgb(111, 173, 40), rgb(179, 243, 105))
+    height: 200px;
+    background-image: linear-gradient(to top, rgb(111, 173, 40), rgb(179, 243, 105))
 }
 
 .chipotle:hover {
@@ -301,6 +160,46 @@ textarea {
 
 .habanero:hover {
     color: red;
+}
+
+.giro3D {
+    margin-bottom: 50px;
+}
+
+.giro3D:hover {
+    animation: 1.5s girotresd 1;
+    backface-visibility: visible;
+}
+
+@keyframes girotresd {
+    40% {
+        transform: perspective(800px) translateZ(120px) rotateY(170deg);
+
+    }
+
+    50% {
+        transform: perspective(800px) translateZ(120px) rotateY(190deg);
+
+    }
+
+    80% {
+        transform: perspective(800px) translateZ(0px) rotateY(360deg);
+
+    }
+
+    100% {
+        transform: perspective(800px) rotateY(360deg);
+    }
+}
+
+@keyframes agrandar {
+    form {
+        transform: scale(1.0);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
 }
 
 @media handheld,
@@ -390,5 +289,13 @@ only screen and (max-width: 767px) {
     #contactanos-experiencia .img-container {
         height: 400px;
         width: 480px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    #animacion-experiencia img {
+        width: 150px;
     }
 }
