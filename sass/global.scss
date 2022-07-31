@@ -158,3 +158,42 @@ main {
     margin-right: 40px;
 
 }
+
+.bloque {
+    background-color: gray;
+    padding: 20px 0;
+
+    &__elemento {
+        text-align: center;
+    }
+
+    &__elemento2 {
+        // font-size: $fontmedium; 
+        font-size: 20px;
+    }
+
+    .btn-base {
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 20px;
+        color: white;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0,3s;
+        .btn-base:hover, .btn-contacto:hover, .btn-info:hover {
+            opacity: 0.8;
+        }
+    
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.btn-contacto {
+    @extend .btn-base;
+    background-color: green;
+}
+
+
