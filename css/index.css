@@ -53,7 +53,6 @@ header .logo {
   color: rgb(255, 0, 0);
   font-size: 2em;
 }
-
 header .container {
   display: flex;
   flex-direction: column;
@@ -68,13 +67,22 @@ main {
   text-align: center;
   padding: 100px 12px;
 }
-
 #somos-totaco .container {
   display: flex;
   justify-content: space-evenly;
 }
+#somos-totaco .img-container {
+  background-image: url("../media/tacoparty.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  width: 600px;
+}
+#somos-totaco h2 {
+  margin-top: 0px;
+}
 
-#somos-totaco .texto {
+.texto {
   width: 50%;
   max-width: 600px;
   text-align: initial;
@@ -84,12 +92,28 @@ main {
   justify-content: center;
 }
 
-#somos-totaco h2 {
+#nosotros .container {
+  text-align: center;
+  padding: 100px 12px;
+}
+#nosotros .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+#nosotros .texto {
+  width: 50%;
+  max-width: 600px;
+  text-align: initial;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#nosotros .h2 {
   margin-top: 0px;
 }
-
-#somos-totaco .img-container {
-  background-image: url("media/tacoparty.jpg");
+#nosotros .img-container {
+  background-image: url("../media/quienesomos.jpg");
   background-size: cover;
   background-position: center center;
   height: 500px;
@@ -122,16 +146,13 @@ main {
 #nuestras-sucursales .programas {
   padding-bottom: 50px;
 }
-
 #nuestras-sucursales p {
   display: block;
   margin-bottom: 30px;
 }
-
 #nuestras-sucursales h3 {
   margin-top: 0;
 }
-
 #nuestras-sucursales .carta {
   padding: 50px;
   background-size: 100% 150px;
@@ -156,6 +177,7 @@ main {
 .bloque {
   background-color: gray;
   padding: 20px 0;
+  transition: all 0.3s;
 }
 .bloque__elemento {
   text-align: center;
@@ -163,7 +185,12 @@ main {
 .bloque__elemento2 {
   font-size: 20px;
 }
-.bloque .btn-base, .bloque .btn-contacto {
+.bloque:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+.btn-base, .btn-contacto {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 10px;
@@ -171,12 +198,15 @@ main {
   color: white;
   font-family: Arial;
   font-weight: bold;
-  transition: 0, 3s;
+  transition: all 0.3s;
 }
-.bloque .btn-base .btn-base:hover, .bloque .btn-contacto .btn-base:hover, .bloque .btn-contacto .btn-contacto:hover, .bloque .btn-base .btn-contacto:hover, .bloque .btn-base .btn-info:hover, .bloque .btn-contacto .btn-info:hover {
+.btn-base .btn-base:hover, .btn-contacto .btn-base:hover, .btn-contacto .btn-contacto:hover,
+.btn-base .btn-contacto:hover,
+.btn-base .btn-info:hover,
+.btn-contacto .btn-info:hover {
   opacity: 0.8;
 }
-.bloque .btn-base:hover, .bloque .btn-contacto:hover {
+.btn-base:hover, .btn-contacto:hover {
   opacity: 0.8;
 }
 
